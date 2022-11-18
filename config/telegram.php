@@ -31,7 +31,7 @@ return [
     'bots'                         => [
         'mybot' => [
             'username' => 'Notive',
-            'token'               => '5608345097:AAHnlXqHfpBKAjZNI10gugW4psl8Baao_EY',
+            'token'               => env('TELEGRAM_BOT_TOKEN'),
             'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', ''),
             'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', ''),
             'commands'            => [

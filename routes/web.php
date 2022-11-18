@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TelegramBotController;
+use App\Notifications\LaravelTelegramNotification;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +18,8 @@ use App\Http\Controllers\TelegramBotController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('register');
 });
 
 Route::get('/updated-activity', [TelegramBotController::class, 'updatedActivity']);
+Route::post('/register', [RegisterController::class, 'store']);
